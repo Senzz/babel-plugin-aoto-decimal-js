@@ -1,0 +1,36 @@
+{
+  "name": "babel-plugin-auto-decimal-js",
+  "version": "0.0.1",
+  "author": "senzzz@qq.com",
+  "description": "babel plugin auto-decimal-js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "babel test/index.test.js --out-dir lib",
+    "clean": "rimraf lib",
+    "build": "npm run clean && babel src --out-dir lib"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "rimraf": "^2.6.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foio/babel_try_catch_loader"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/mit-license.php"
+    }
+  ],
+  "dependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/generator": "^7.4.4",
+    "@babel/helper-module-imports": "^7.0.0",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/template": "^7.4.4",
+    "@babel/types": "^7.4.4",
+    "decimal.js-light": "^2.5.0"
+  }
+}
