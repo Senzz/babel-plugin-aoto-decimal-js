@@ -16,6 +16,9 @@ const pow = new Decimal(2 ** 10)
 const mod = new Decimal(10 % 3)
 
     ↓ ↓ ↓ ↓ ↓ ↓
+    
+import Decimal from 'decimal.js'
+// import Decimal from 'decimal.js-light'
 
 const a = new Decimal(2).mul(10);  // no change
 const b = new Decimal(new Decimal(0.57).mul(100)).mul(20);
