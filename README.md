@@ -2,6 +2,11 @@
 automatically help you deal with decimal. 
 solve the floating point problem
 
+[![NPM version](https://img.shields.io/npm/v/babel-plugin-auto-decimal-js.svg?style=flat)](https://npmjs.org/package/babel-plugin-auto-decimal-js)
+[![Build Status](https://travis-ci.org/Senzz/babel-plugin-aoto-decimal-js.svg?branch=master)](https://travis-ci.org/Senzz/babel-plugin-aoto-decimal-js)
+
+---
+
 ## why
 - solve the tedious decimal.js code
 - can solve the floating point problem like this
