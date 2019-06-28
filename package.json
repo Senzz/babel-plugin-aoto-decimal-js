@@ -1,36 +1,57 @@
 {
   "name": "babel-plugin-auto-decimal-js",
-  "version": "0.0.1",
-  "author": "senzzz@qq.com",
+  "version": "0.0.3",
+  "keywords": [
+    "babel-plugin",
+    "decimal"
+  ],
+  "author": "senzz <senzzz@qq.com>",
   "description": "babel plugin auto-decimal-js",
   "main": "lib/index.js",
   "scripts": {
-    "test": "babel test/index.test.js --out-dir lib",
+    "build": "umi-tools build",
+    "test": "umi-tools test --coverage",
+    "debug": "umi-tools test",
     "clean": "rimraf lib",
-    "build": "npm run clean && babel src --out-dir lib"
+    "lint": "eslint --ext .js src",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "prepack": "npm run build"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.4.5",
-    "rimraf": "^2.6.3"
+    "babel-preset-umi": "^1.6.0",
+    "coveralls": "^3.0.4",
+    "decimal.js": "^10.2.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "rimraf": "^2.6.3",
+    "umi-tools": "^0.4.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/foio/babel_try_catch_loader"
+    "url": "https://github.com/Senzz/babel-plugin-aoto-decimal-js"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/mit-license.php"
-    }
+  "license": "MIT",
+  "pre-commit": [
+    "lint"
+  ],
+  "babel": {
+    "presets": [
+      "umi"
+    ]
+  },
+  "files": [
+    "src",
+    "lib",
+    "package.json",
+    "README.md"
   ],
   "dependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
     "@babel/generator": "^7.4.4",
     "@babel/helper-module-imports": "^7.0.0",
-    "@babel/preset-es2015": "^7.0.0-beta.53",
-    "@babel/template": "^7.4.4",
-    "@babel/types": "^7.4.4",
-    "decimal.js-light": "^2.5.0"
+    "@babel/preset-es2015": "^7.0.0-beta.53"
   }
 }
