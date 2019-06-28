@@ -1,4 +1,4 @@
-import { transformFileSync, transform } from "@babel/core";
+import { transformFileSync } from "@babel/core";
 import { join } from 'path';
 import plugin from '../src/index';
 
@@ -11,7 +11,7 @@ describe('index', () => {
     const moduleDir = join(modulesDir, caseName);
     const actualFile = join(moduleDir, 'actual.js');
     const expectedFile = join(moduleDir, 'expected.js');
-    
+
     it(`should work with ${caseName}`, () => {
       const actualCode = (() => {
         return transformFileSync(actualFile, {
