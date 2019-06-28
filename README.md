@@ -20,7 +20,7 @@ Decimal(0.57).mul(100).toNumber() // 57
 ```
 
 ## Usage
-```
+```JavaScript
 import Decimal from 'decimal.js';
 
 const getNum = () => {
@@ -52,3 +52,4 @@ const test5 = Decimal(10).sub(Decimal(10).mul(30)).mul(30).mul(Decimal(20).sub(1
 const test6 = Decimal(10).div(2).mul(3).sub(Decimal(5).mul(20).div(3.3));
 const test7 = Decimal(20).mod(3).mul(11);
 const test8 = Decimal(30).mul(Decimal(2).pow(2));
+```
