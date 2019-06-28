@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-auto-decimal-js",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "keywords": [
     "babel-plugin",
     "decimal"
