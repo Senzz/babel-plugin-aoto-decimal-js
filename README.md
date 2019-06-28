@@ -7,7 +7,7 @@ solve the floating point problem
 
 ---
 
-## why
+## Why
 - solve the tedious decimal.js code
 - can solve the floating point problem like this
 
