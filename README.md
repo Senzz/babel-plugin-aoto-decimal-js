@@ -11,7 +11,7 @@ solve the floating point problem
 - solve the tedious decimal.js code
 - can solve the floating point problem like this
 
-```javascript
+```javaScript
 // problem
 Decimal(0.57 * 100).toNumber() // 56.999999999
 
@@ -19,7 +19,32 @@ Decimal(0.57 * 100).toNumber() // 56.999999999
 Decimal(0.57).mul(100).toNumber() // 57
 ```
 
+## install
+```bash
+$ yarn add decimal.js
+$ yarn add babel-plugin-auto-decimal-js --dev
+```
+Or
+```bash
+$ npm i decimal.js --save
+$ npm i babel-plugin-auto-decimal-js --dev
+```
+
 ## Usage
+```javaScript
+// .babelrc
+{
+  "plugins": [
+    "auto-decimal-js"
+  ],
+  "presets": [
+    "react-app"
+  ]
+}
+```
+
+## Example
+Transforms
 ```JavaScript
 import Decimal from 'decimal.js';
 
@@ -35,9 +60,11 @@ const test5 = new Decimal((10 - 10 * 30) * 30 * (20 - 10)).toFixed(3, 1);
 const test6 = new Decimal(10 / 2 * 3 - 5 * 20 / 3.3);
 const test7 = new Decimal(20 % 3 * 11);
 const test8 = new Decimal(30 * 2 ** 2);
+```
 
-    ↓ ↓ ↓ ↓ ↓ ↓
-    
+roughly to
+
+```javaScript    
 import Decimal from 'decimal.js';
 
 const getNum = () => {
